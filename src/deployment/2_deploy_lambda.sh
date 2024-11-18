@@ -15,3 +15,11 @@ else
     echo "Failed to deploy $LAMBDA_NAME"
     exit 1
 fi
+
+echo "Deleting existing zip file (if any)..."
+if [ -f "$ZIP_FILE" ]; then
+    rm "$ZIP_FILE"
+    echo "Deleted $ZIP_FILE"
+else
+    echo "No zip file to delete"
+fi

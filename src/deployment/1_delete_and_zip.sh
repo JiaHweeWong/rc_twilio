@@ -12,5 +12,5 @@ fi
 
 echo "Creating new zip file..."
 cd ..
-zip -r "$ZIP_FILE" src
+zip -r "$ZIP_FILE" . -i src
 echo "Zip file created: $ZIP_FILE"
