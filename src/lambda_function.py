@@ -1,6 +1,7 @@
 import os
+import sys
 import logging
-
+import json
 from dotenv import load_dotenv
 from module.ssm_utils import *
 
@@ -16,13 +17,6 @@ load_dotenv()
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
-# # Create a console handler
-# console_handler = logging.StreamHandler()
-# console_handler.setLevel(logging.INFO)  # Set the handler level
-
-# # Add the handler to the logger
-# logger.addHandler(console_handler)
-
 twilio_account_sid = get_parameter(os.environ['TWILIO_ACCOUNT_SID_SSM_NAME'])
 twilio_auth_token = get_parameter(os.environ['TWILIO_AUTH_TOKEN_SSM_NAME'])
 
@@ -37,7 +31,6 @@ client = Client(twilio_account_sid, twilio_auth_token)
 logger.info("Lambda Initialized")
 
 # Send a WhatsApp message
-
 def lambda_handler(event, context):
 
     try:
