@@ -1,0 +1,1 @@
+aws lambda invoke --function-name rn_twilio_messenger --payload file://run/payload.json run/response.json
