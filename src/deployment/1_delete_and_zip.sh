@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ZIP_FILE="../rn_twilio_messanger.zip"
+ZIP_FILE="deployment/rn_twilio_messenger.zip"
 
 echo "Deleting existing zip file (if any)..."
 if [ -f "$ZIP_FILE" ]; then
@@ -11,6 +11,6 @@ else
 fi
 
 echo "Creating new zip file..."
+zip -r "$ZIP_FILE" ./*
 cd ..
-zip -r "$ZIP_FILE" . -i src
 echo "Zip file created: $ZIP_FILE"

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 LAMBDA_NAME="rn_twilio_messenger"
-ZIP_FILE="../rn_twilio_messenger.zip"
+ZIP_FILE="deployment/rn_twilio_messenger.zip"
 
 echo "Deploying Lambda function: $LAMBDA_NAME"
 
