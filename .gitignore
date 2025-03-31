@@ -166,5 +166,5 @@ lib/
 aws/
 
 # Libraries For Lambda Function to work
-lambda_packages/
-lambda_packages/*
+python/
+python/*
