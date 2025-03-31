@@ -165,5 +165,6 @@ cython_debug/
 lib/
 aws/
 
-# Libraries
+# Libraries For Lambda Function to work
+lambda_packages/
 lambda_packages/*
